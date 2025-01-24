@@ -20,3 +20,13 @@ We can Use on of those IPS to forward the traffic to us <br>
 
 
 So i capture the traffic using burpsuite and send it to the repeater : 
+
+![image](https://github.com/user-attachments/assets/46ad19a8-e9c4-4f7c-8c34-c7660bb61dcc)
+
+And as you can see i have added an additional header called X-Forwarded-For : 'An Ip from the image just before'<br>
+And after sending the request we can see that he gave us  the password to validate the challenge <br>
+
+<h2>Another Method (easier) </h2>
+Using CURL by adding the X-Forwarded-For to the header using -H 
+
+![image](https://github.com/user-attachments/assets/bb8ba828-7f72-439c-a135-8137ab4d665b)
