@@ -23,7 +23,7 @@ But it wasn't showing anything
 ![image](https://github.com/user-attachments/assets/b06c9faf-ce86-44b0-9a1b-cbd1eceff0b9)
 
 
-so i've thought since it is php command injection its executing the script when i cat it with that on i've tried to cat just the flag
+so i've thought since it is php  injection it's gotta be  executing the script when i cat it with that on i've tried to cat just the flag
 ![image](https://github.com/user-attachments/assets/7ba4f636-e866-4dda-b637-2605e481f859)
 
 
