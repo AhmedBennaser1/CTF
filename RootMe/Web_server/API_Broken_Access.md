@@ -41,7 +41,10 @@ But it didn't worked
 
 with that on it was pretty simple 
 by just executing the url/api/user/id_number you'll get the flag on the userid=1 of admin
+
 ![image](https://github.com/user-attachments/assets/cd09169a-ba8a-40f2-9812-7851ad3a209a)
 
+
+flag=RM{E4sy_1d0r_0n_API}
 
 
