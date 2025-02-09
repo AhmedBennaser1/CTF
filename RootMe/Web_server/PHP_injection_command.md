@@ -12,10 +12,12 @@ Service de ping v1
 So starting with testing some injection like ;cat ls to see if we have the flag on our current directory 
 
 ![image](https://github.com/user-attachments/assets/fcbcc630-2b92-4bc0-8414-8e3f0fd2f0bb)
-
+;cat ls
 BUt nothing intersting with that i saw the hint given by the challenge that we need to read the index.php
 
+
 ![image](https://github.com/user-attachments/assets/2eae4564-1dbb-450d-8e0c-fa2b385aabd2)
+
 
 
 
