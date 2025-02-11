@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4c68d14d-8b35-4cf2-89c3-7634e118cfcc)challenge link: https://www.root-me.org/fr/Challenges/Web-Serveur/Fichier-de-sauvegarde
+challenge link: https://www.root-me.org/fr/Challenges/Web-Serveur/Fichier-de-sauvegarde
 
 Fichier de sauvegarde
 15 Points  
