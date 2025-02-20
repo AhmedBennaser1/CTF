@@ -50,9 +50,11 @@ after that i had no clue what i'm going to do to access the developer on ssh i'v
 ![image](https://github.com/user-attachments/assets/ad7a351c-58cb-4b3a-af24-17836abd434f)
 
 now access that page http://dev.titanic.htb ( don't forget to that to the /etc/hosts )
+
 ![image](https://github.com/user-attachments/assets/03e196cd-f145-4d4c-aae4-14710e9e9a27)
 
 we can see that it uses gitea right here 
+
 ![image](https://github.com/user-attachments/assets/752ad44a-3ad6-4a7f-b34d-1e1fb85ee4b6)
 
 so asking the AI he gave me the path for the config file 
