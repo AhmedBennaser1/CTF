@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/06085f42-698e-4023-acb8-e31464089513)<h1>Hack the BOX </h1>
+<h1>Hack the BOX </h1>
 <h3>Titanic ( Linux - easy ) </h3>
 
 ![image](https://github.com/user-attachments/assets/a3d9d207-6602-459a-bed8-590c80a3005f)
