@@ -6,6 +6,7 @@
  As every box or machine you deploy I've started with basic nmap scan 
 
  Command : <b> nmap -p- {ip} --min-rate 10000 </b> 
+ 
 ![image](https://github.com/user-attachments/assets/372b5deb-7b52-4a25-943e-f49ba821489d)
 
  after having the idea of open ports we add -sCV for the scripts and versions running on the active ports and -oA to save the output of our nmap scan 
@@ -36,6 +37,7 @@ i've tried to sql inject that but it didn't worked that's why when i have forwar
 ![image](https://github.com/user-attachments/assets/7ee62446-a043-46a3-b228-585b4560fe30)
 
 seems like we can't get some files using an LFI attack  and it's was a success 
+
 ![image](https://github.com/user-attachments/assets/b8c45ff0-3aba-4c68-ad72-17dd4cbedac2)
 
 after that i've searched for active users and seemed like developer was the user so i've tried to access the flag using those information and same it was a success 
@@ -83,6 +85,7 @@ and with that i got the password for the developer and now the ssh works
 ![image](https://github.com/user-attachments/assets/279b34fb-01de-47d1-a692-12b40fa864cf)
 
 NOw the mission is to search for priv esc methods and searching through that they were no suid permissions or sudo for the developer  i've tried to see the listening ports but still nothing now i thought about going through the process executed by the developer 
+
 ![image](https://github.com/user-attachments/assets/8a24c2ac-a11b-4976-b158-614a3ccad2f5)
 
 there was an intersting file app.py but there was nothing over there so searching around i found but the /images was writable by the developer 
