@@ -46,3 +46,16 @@ after that i had no clue what i'm going to do to access the developer on ssh i'v
 
 ![image](https://github.com/user-attachments/assets/928445bc-b7f0-4bc5-8625-60c8cfbd27e9)
 ![image](https://github.com/user-attachments/assets/ad7a351c-58cb-4b3a-af24-17836abd434f)
+
+now access that page http://dev.titanic.htb ( don't forget to that to the /etc/hosts )
+![image](https://github.com/user-attachments/assets/03e196cd-f145-4d4c-aae4-14710e9e9a27)
+
+we can see that it uses gitea right here 
+![image](https://github.com/user-attachments/assets/752ad44a-3ad6-4a7f-b34d-1e1fb85ee4b6)
+
+so asking the AI he gave me the path for the config file 
+![image](https://github.com/user-attachments/assets/f4f3c314-cf4a-41af-b019-dc2220a5d15e)
+
+
+and like that we got a clie about a database file on the /data/gitea/gitea.db  
+
