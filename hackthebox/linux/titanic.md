@@ -57,6 +57,7 @@ we can see that it uses gitea right here
 
 ![image](https://github.com/user-attachments/assets/752ad44a-3ad6-4a7f-b34d-1e1fb85ee4b6)
 
+
 so asking the AI he gave me the path for the config file 
 ![image](https://github.com/user-attachments/assets/f4f3c314-cf4a-41af-b019-dc2220a5d15e)
 
