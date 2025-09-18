@@ -1,0 +1,12 @@
+<?php
+// only use in a legal, controlled environment
+$file = 'index.php';
+
+if (file_exists($file)) {
+    // show raw source safely escaped for HTML
+    echo '<pre>' . htmlspecialchars(file_get_contents($file)) . '</pre>';
+    // or use: highlight_file($file); // shows highlighted source
+} else {
+    echo 'file not found';
+}
+?>
