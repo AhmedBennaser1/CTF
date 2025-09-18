@@ -1,0 +1,15 @@
+<?php
+// show_source_highlight.php
+$target = 'index.php';
+
+if (!file_exists($target)) {
+    echo 'File not found.';
+    exit;
+}
+
+// show_source prints the source with PHP syntax highlighting
+echo '<h3>Highlighted source of ' . htmlspecialchars($target) . '</h3>';
+echo '<div>';
+show_source($target);
+echo '</div>';
+?>
